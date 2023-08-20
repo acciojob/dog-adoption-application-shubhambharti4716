@@ -1,86 +1,81 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
-	<style>
-		 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  <style>
+    /* Your CSS styling here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-  .form-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 400px;
-  }
+    .form-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
 
-  .form-field {
-    margin-bottom: 10px;
-  }
+    .form-field {
+      margin-bottom: 10px;
+    }
 
-  .form-label {
-    font-weight: bold;
-  }
+    .form-label {
+      font-weight: bold;
+    }
 
-  .form-input {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+    .form-input {
+      width: 95%; /* Adjusted width to 100% */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
 
-  .form-checkbox-label {
-    display: flex;
-    align-items: center;
-  }
+    .form-checkbox-label {
+      display: flex;
+      align-items: center;
+    }
 
-  .form-multiselect {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 100px;
-  }
+    .form-multiselect {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      height: 100px;
+    }
 
-  .form-submit {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+    .form-submit {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-  .form-submit:hover {
-    background-color: #0056b3;
-  }
-</style>
+    .form-submit:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
-	<div class="form-container">
-    <form>
+  <div class="form-container">
+    <form action="dog-adoption-application.php" method="post">
       <div class="form-field">
         <label class="form-label" for="name">Name</label>
         <input class="form-input" type="text" id="name" name="name" placeholder="Name" required>
       </div>
       <div class="form-field">
         <label class="form-label" for="phone">Phone Number</label>
-        <input class="form-input" type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        <input class="form-input" type="text" id="phone" name="phone" placeholder="Phone Number" required>
       </div>
       <div class="form-field">
         <label class="form-label" for="address">Address</label>
@@ -88,13 +83,13 @@
       </div>
       <div class="form-field">
         <label class="form-checkbox-label">
-          <input type="checkbox" name="dog_experience" value="Have you ever lived with a Dog before?">
+          <input type="checkbox" id="checkbox" name="dog_experience" value="Have you ever lived with a Dog before?">
           Have you ever lived with a Dog before?
         </label>
       </div>
       <div class="form-field">
-        <label class="form-label" for="breeds">Please select your preferred breeds <br>(select at least 3)</label>
-        <select class="form-multiselect" id="breeds" name="breeds[]" multiple required>
+        <label class="form-label" for="multiSelect">Please select your preferred breeds <br>(select at least 3)</label>
+        <select class="form-multiselect" id="multiSelect" name="breeds[]" multiple required multi-select box>
           <option value="breed1">Breed 1</option>
           <option value="breed2">Breed 2</option>
           <option value="breed3">Breed 3</option>
@@ -103,7 +98,7 @@
         </select>
       </div>
       <div class="form-field">
-        <input class="form-submit" type="submit" value="Submit">
+        <input class="form-submit" type="submit" id="submit" value="Submit">
       </div>
     </form>
   </div>
